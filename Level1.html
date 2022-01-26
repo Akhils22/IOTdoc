@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala IoT Challenge: Level 1</title>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--heading section-->
+    <header class="main">
+        <div class="navbar">
+
+        </div>
+        <div class="pagehead">
+            <h1>Level 1<br><span>Basic Electronics and Arduino</span></h1>
+            <p class="maincontent">Basic electronics, Sensors, Arduino programming and a Live project</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="experiments">
+            <div class="accordion">
+                <div class="accordion-item" id="exp1">
+                    <a class="accordion-link" href="#exp1">
+                        Experiment 1
+                        <ion-icon name="chevron-up-outline" class="up"></ion-icon>
+                        <ion-icon name="chevron-down-outline" class="down"></ion-icon>
+                    </a>
+                    <div class="expdetails">
+                        <h1>Hello World LED Blinking</h1>
+                        <p>The Aim is to blink an LED using Arduino Uno Board.</p>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Components Required</h1>
+                        <ul>
+                            >>>  Arduino Uno Board<br>
+                            >>>  USB Cable<br>
+                            >>>  LED(any color) *1 Nos.<br>
+                            >>>  220 OHM Resistor *1 Nos<br>
+                            >>>  Breadboard<br>
+                            >>>  Jumper Wires(male to male) *2 Nos
+                        </ul>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Circuit Diagram</h1>
+                        <img src="diagram/first.png" alt="circuit1">
+                    </div>
+                    <div class="expdetails">
+                        <h1>Code</h1>
+                        <p class="code">
+                            int ledPin = 10; // define digital pin 10.<br>
+                            <br>
+                            void setup()<br>
+                            {<br>
+                            pinMode(ledPin, OUTPUT);// define pin with LED connected as output.<br>
+                            }<br>
+                            <br>
+                            void loop()<br>
+                            {<br>
+                            digitalWrite(ledPin, HIGH); // set the LED on.<br>
+                            delay(1000); // wait for a second.<br>
+                            digitalWrite(ledPin, LOW); // set the LED off.<br>
+                            delay(1000); // wait for a second<br>
+                            }
+                        </p>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Output</h1>
+                        <p>The LED blinked with a time interval of 1 second.</p>
+                        <iframe width="585" height="327" src="video/first.mp4" class="video"></iframe>
+                    </div>
+                </div>
+                <div class="accordion-item" id="exp2">
+                    <a class="accordion-link" href="#exp2">
+                        Experiment 2
+                        <ion-icon name="chevron-up-outline" class="up"></ion-icon>
+                        <ion-icon name="chevron-down-outline" class="down"></ion-icon>
+                    </a>
+                    <div class="expdetails">
+                        <h1>Traffic Light</h1>
+                        <p>In the previous program, we have done the LED blinking experiment with one LED. Now, it’s time to up the stakes and do a bit more complicated experiment-traffic lights. Actually, these two experiments are similar. While in this traffic lights experiment, we use 3 LEDs with different colors rather than 1 LED</p>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Components Required</h1>
+                        <p>
+                            >>>  Arduino board *1<br>
+                            >>>  USB cable *1<br>
+                            >>>  Red M5 LED *1<br>
+                            >>>  Yellow M5 LED *1<br>
+                            >>>  Green M5 LED *1<br>
+                            >>>  220Ω resistor *3<br>
+                            >>>  Breadboard *1<br>
+                            >>>  Breadboard jumper wires *several<br>
+                        </p>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Circuit Diagram</h1>
+                        <img src="diagram/second.png" alt="circuit2">
+                    </div>
+                    <div class="expdetails">
+                        <h1>Code</h1>
+                        <p class="code">
+                            int redled =10; // initialize digital pin 8.<br>
+                            int yellowled =7; // initialize digital pin 7.<br>
+                            int greenled =4; // initialize digital pin 4.<br>
+                            <br>
+                            void setup()<br>
+                            {<br>
+                            pinMode(redled, OUTPUT);// set the pin with red LED as “output”<br>
+                            pinMode(yellowled, OUTPUT); // set the pin with yellow LED as “output”<br>
+                            pinMode(greenled, OUTPUT); // set the pin with green LED as “output”<br>
+                            }<br>
+                            <br>
+                            void loop()<br>
+                            {<br>
+                            digitalWrite(greenled, HIGH);//// turn on green LED<br>
+                            delay(5000);// wait 5 seconds<br>
+                            <br>
+                            digitalWrite(greenled, LOW); // turn off green LED<br>
+                            for(int i=0; i<3; i++)// blinks for 3 times<br>
+                            {<br>
+                            delay(500);// wait 0.5 second<br>
+                            digitalWrite(yellowled, HIGH);// turn on yellow LED<br>
+                            delay(500);// wait 0.5 second<br>
+                            digitalWrite(yellowled, LOW);// turn off yellow LED<br>
+                            }<br>
+                            <br> 
+                            delay(500);// wait 0.5 second<br>
+                            digitalWrite(redled, HIGH);// turn on red LED<br>
+                            delay(5000);// wait 5 seconds<br>
+                            digitalWrite(redled, LOW);// turn off red LED<br>
+                            }
+                        </p>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Output</h1>
+                        <p>In Traffic light the green LED turns on for about 5 second, then it is turned off. Then the yellow LED blinks 3 times with a time interval of 0.5 second. Then the red LED is turned on for about 5 seconds. This process continues.</p>
+                        <iframe width="585" height="327" src="video/second.mp4" class="video"></iframe>
+                    </div>
+                </div>
+                <div class="accordion-item" id="exp3">
+                    <a class="accordion-link" href="#exp3">
+                        Experiment 3
+                        <ion-icon name="chevron-up-outline" class="up"></ion-icon>
+                        <ion-icon name="chevron-down-outline" class="down"></ion-icon>
+                    </a>
+                    <div class="expdetails">
+                        <h1>Hello World LED Blinking</h1>
+                        <p>The Aim is to blink an LED using Arduino Uno Board.</p>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Components Required</h1>
+                        <ul>
+                            >>>  Arduino Uno Board<br>
+                            >>>  USB Cable<br>
+                            >>>  LED(any color) *1 Nos.<br>
+                            >>>  220 OHM Resistor *1 Nos<br>
+                            >>>  Breadboard<br>
+                            >>>  Jumper Wires(male to male) *2 Nos
+                        </ul>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Circuit Diagram</h1>
+                        <img src="diagram/first.png" alt="circuit1">
+                    </div>
+                    <div class="expdetails">
+                        <h1>Code</h1>
+                        <p class="code">
+                            int ledPin = 10; // define digital pin 10.<br>
+                            <br>
+                            void setup()<br>
+                            {<br>
+                            pinMode(ledPin, OUTPUT);// define pin with LED connected as output.<br>
+                            }<br>
+                            <br>
+                            void loop()<br>
+                            {<br>
+                            digitalWrite(ledPin, HIGH); // set the LED on.<br>
+                            delay(1000); // wait for a second.<br>
+                            digitalWrite(ledPin, LOW); // set the LED off.<br>
+                            delay(1000); // wait for a second<br>
+                            }
+                        </p>
+                    </div>
+                    <div class="expdetails">
+                        <h1>Output</h1>
+                        <p>The LED blinked with a time interval of 1 second.</p>
+                        <iframe width="585" height="327" src="video/first.mp4" class="video"></iframe>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--ion icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+
+</body>
+</html>

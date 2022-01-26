@@ -1,0 +1,332 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*----- heading section -----*/
+.main
+{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(images/backgroundimage.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+    position: relative;
+
+}
+
+.navbar
+{
+    width: auto;
+    height: 250px;
+    margin: auto;
+}
+
+.pagehead
+{
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: #ffffff;
+    position: relative;
+    padding-right: 20rem;
+    padding-left: 8rem;
+}
+
+.pagehead .maincontent
+{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+
+}
+
+.pagehead h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.pagehead .githubbutton
+{
+    width: 160px;
+    height: 40px;
+    background: #4076ff;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.pagehead .githubbutton a
+{
+    text-decoration: none;
+    color: #031440;
+    transition: 0.3s ease;
+}
+
+.githubbutton:hover
+{
+    background-color: #7aa0ff;
+}
+
+.pagehead span
+{
+    color: #7aa0ff;
+    font-size: 100px;
+}
+
+
+/*----- content -----*/
+.content
+{
+    background: #0f141c;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-right: 8rem;
+    padding-left: 8rem;
+
+}
+
+.content h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #7aa0ff;
+}
+
+.content p
+{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+
+/*----- levels -----*/
+.levels
+{
+    position: relative;
+    background: #0f141c;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-right: 8rem;
+    padding-left: 8rem;
+
+}
+
+.levels h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #7aa0ff;
+}
+
+.levels p
+{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.row
+{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.differentlevels {
+    flex-basis: 22%;
+    background: #7aa0ff;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    box-shadow: 0px 0px 0px #7aa0ff;
+    -webkit-transition:  box-shadow .6s ease-out;
+       box-shadow: .8px .9px 3px #7aa0ff;
+  
+  }
+.differentlevels:hover{ 
+    box-shadow: 1px 8px 20px #7aa0ff;
+    
+      
+    }
+   
+.differentlevels a
+{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #000000;
+    transition: 0.3s ease;
+    
+}
+
+
+*,
+*::before,
+*::after
+{
+    box-sizing: inherit;
+}
+
+.experiments
+{
+    background: #0f141c;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 8rem;
+    padding-top: 10rem;
+}
+
+.accordion-item
+{
+    background-color: rgba(23,27,33,0.3);
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    padding: 3rem;
+    box-shadow: 0.5rem 2px 0.5rem rgba(0,0,0,0.3);
+}
+
+.accordion-link
+{
+    font-size: 1.6rem;
+    color: rgba(122,160,255);
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;    
+}
+
+.accordion-link ion-icon
+{
+    color: whitesmoke;
+    padding: 00.5rem;
+
+}
+
+.accordion-link .up
+{
+    display: none;
+}
+
+.expdetails
+{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background: black;
+    transition: max-height 5s;
+}
+
+.expdetails::before
+{
+    content: "";
+    position: absolute;
+    width: 0.6rem;
+    height: 100%;
+    background-color: grey;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.expdetails h1
+{
+    font-size: 36px;
+    color: rgba(122,160,255,0.6);
+    padding: 2rem;
+}
+
+.expdetails p
+{
+    font-size: 20px;
+    color: rgba(255,255,255,0.6);
+    padding: 2rem;
+}
+
+.expdetails .code
+{
+    font-size: 20px;
+    color: rgba(255,255,255,0.6);
+    padding: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.expdetails img 
+{
+    padding: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    
+}
+
+.expdetails .video 
+{
+    padding: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-item:target .expdetails
+{
+    max-height: 150rem;
+
+}
+
+.accordion-item:target .accordion-link .down
+{
+    display: none;
+
+}
+
+.accordion-item:target .accordion-link .up
+{
+    display: block;
+    
+}
